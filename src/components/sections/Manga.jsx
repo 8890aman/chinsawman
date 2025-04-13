@@ -70,16 +70,44 @@ const Manga = () => {
             <div key={volume.id} className="flex flex-col group">
               {/* Manga cover */}
               <div className="h-64 sm:h-80 bg-white border-4 border-black mb-4 relative overflow-hidden group-hover:-translate-y-1 transition-transform duration-300">
-                {/* This would be the volume cover image */}
-                <div className="absolute inset-0 bg-white flex items-center justify-center">
-                  <div className="text-black font-black text-8xl opacity-20">
-                    {volume.id}
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-black font-bold text-2xl border-2 border-black p-6">
-                      VOL. {volume.id}
+                {/* Volume cover image */}
+                <div className="absolute inset-0 bg-white">
+                  {volume.id === 1 ? (
+                    <img
+                      src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTLiPXToHHvel-q1Lj-YuVnKEabcBdIb8HLWXPiNudjbyxc3Acd"
+                      alt="Chainsaw Man Volume 1 Cover"
+                      className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  ) : volume.id === 2 ? (
+                    <img
+                      src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGJRYoLUxv0J5BFBkI6ZVnaW4Ey1-JXfjWc1ntTGKSLbIbGT0A"
+                      alt="Chainsaw Man Volume 2 Cover"
+                      className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  ) : volume.id === 3 ? (
+                    <img
+                      src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTe3L6R3Bkvk8g_b4es3TZmD5IC4Pfvx-0rehKfzdw-3l8ISyQG"
+                      alt="Chainsaw Man Volume 3 Cover"
+                      className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  ) : volume.id === 4 ? (
+                    <img
+                      src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQJYvRruXAeqDIX6aKL1NOOqGdk4Ek8a_LFGZS73WovGrSnFVm_"
+                      alt="Chainsaw Man Volume 4 Cover"
+                      className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-black font-black text-8xl opacity-20">
+                        {volume.id}
+                      </div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-black font-bold text-2xl border-2 border-black p-6">
+                          VOL. {volume.id}
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
                 
                 {/* Manga details overlay */}
@@ -146,4 +174,4 @@ const Manga = () => {
   );
 };
 
-export default Manga; 
+export default Manga;
