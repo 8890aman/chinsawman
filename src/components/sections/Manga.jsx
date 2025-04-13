@@ -73,7 +73,7 @@ const Manga = () => {
                 {/* Volume cover image */}
                 <div className="absolute inset-0 bg-white">
                   {volume.id === 1 ? (
-                    <img
+                    <img 
                       src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTLiPXToHHvel-q1Lj-YuVnKEabcBdIb8HLWXPiNudjbyxc3Acd"
                       alt="Chainsaw Man Volume 1 Cover"
                       className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"

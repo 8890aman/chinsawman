@@ -18,7 +18,7 @@ const News = () => {
       category: "Anime",
       excerpt: "MAPPA studio has officially announced that Chainsaw Man Season 2 is in production. Stay tuned for more updates!",
       featured: true,
-      image: "season-announcement"
+      image: "https://i.pinimg.com/236x/26/72/e6/2672e618e4f91167acc076fe75a3355d.jpg"
     },
     {
       id: 3,

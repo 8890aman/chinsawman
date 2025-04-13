@@ -11,12 +11,12 @@ const Gallery = () => {
     { id: 'fanart', name: 'Fan Art' },
   ];
 
-  // In a real project, these would be actual image URLs
   const galleryItems = [
     {
       id: 1,
       category: 'anime',
       title: 'Denji Transformation',
+      image: 'https://i.pinimg.com/236x/1f/8f/14/1f8f1440a01e35f571047f0ec56ee8ac.jpg',
       aspectRatio: 'aspect-video',
       featured: true
     },
@@ -24,24 +24,28 @@ const Gallery = () => {
       id: 2,
       category: 'manga',
       title: 'First Encounter',
+      image: 'https://i.pinimg.com/236x/4b/9d/5a/4b9d5a2a8c1f12da02a2817d6225476c.jpg',
       aspectRatio: 'aspect-square'
     },
     {
       id: 3,
       category: 'anime',
       title: 'Power vs Zombie Devil',
+      image: 'https://i.pinimg.com/236x/b8/78/f4/b878f49d1bc4544cc5785f351d9e9fe2.jpg',
       aspectRatio: 'aspect-video'
     },
     {
       id: 4,
       category: 'promo',
       title: 'Season One Key Visual',
+      image: 'https://i.pinimg.com/236x/64/6d/8c/646d8cc7f759adce46e7d31442b67a3d.jpg',
       aspectRatio: 'aspect-[3/4]'
     },
     {
       id: 5,
       category: 'manga',
       title: 'Makima Reveal',
+      image: 'https://i.pinimg.com/736x/96/02/67/960267fcc566eecb2bf2305e36a46b8c.jpg',
       aspectRatio: 'aspect-square',
       featured: true
     },
@@ -49,18 +53,21 @@ const Gallery = () => {
       id: 6,
       category: 'fanart',
       title: 'Fanart Contest Winner',
+      image: 'https://i.pinimg.com/236x/e3/41/d5/e341d54980f3eb6952d40dd1f543c4a1.jpg',
       aspectRatio: 'aspect-[3/4]'
     },
     {
       id: 7,
       category: 'anime',
       title: 'Aki and the Future Devil',
+      image: 'https://i.pinimg.com/236x/a1/03/77/a1037705a08827783eb4fbfe4e951792.jpg',
       aspectRatio: 'aspect-video'
     },
     {
       id: 8,
       category: 'promo',
       title: 'Manga Volume Cover',
+      image: 'https://i.pinimg.com/474x/6c/ec/a9/6ceca9dae1c006ff061b1b9c39f2d66a.jpg',
       aspectRatio: 'aspect-[3/4]'
     }
   ];
@@ -118,12 +125,12 @@ const Gallery = () => {
               key={item.id} 
               className={`${item.aspectRatio} ${item.featured ? 'sm:col-span-2 sm:row-span-2' : ''} group cursor-pointer relative overflow-hidden border-4 border-black transition-transform duration-300 hover:-translate-y-1`}
             >
-              {/* This would be an actual image in a real project */}
               <div className="w-full h-full bg-white relative">
-                {/* Placeholder for actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-black opacity-20 text-8xl font-black">
-                  CSM
-                </div>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
                 
                 {/* Manga-style action lines */}
                 <div className="absolute inset-0 overflow-hidden opacity-30">
@@ -180,4 +187,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery; 
+export default Gallery;
